@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JSPS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="prediction/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="prediction/css/util.css">
+	<link rel="stylesheet" type="text/css" href="prediction/css/main.css">
+<!--===============================================================================================-->
+
+</head>
+<body>
+
+	<div class="bg-contact2" style="background-image: url('prediction/images/cover.jpg');">
+		<div class="container-contact2">
+			<div class="wrap-contact2">
+				<form method="post" action="/" class="contact2-form validate-form">
+					<span class="contact2-form-title">
+                        Job Salary Prediction                       
+					</span>
+					<h3>Your Salary is : <%= message %> baht</h3>
+					<br><br>
+					<div class="wrap-input2 validate-input" data-validate="JobTitle is required">
+						<input class="input2" type="text" name="jobtitle">
+						<span class="focus-input2" data-placeholder="JobTitle"></span>
+					</div>
+
+					<select name="level">
+						<option value="">Level</option>
+						<option>Entry Level</option>
+						<option>Middel</option>
+						<option>Senior</option>
+						<option>Top</option>						
+					</select>
+					<br><br>
+
+					<div class="wrap-input2 validate-input" data-validate = "Organization is required">
+						<input class="input2" type="text" name="organization">
+						<span class="focus-input2" data-placeholder="Organization"></span>
+					</div>
+
+					<select name="joblocation">
+						<option value="">Location</option>
+						<option>Bangkok</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangbon</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkae</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkapi</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkhen</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkhuntien</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkoknoi</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkokyai</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkor-laem</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangna</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangplad</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangrak</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangsue</option>
+						<option>&nbsp;&nbsp;&nbsp;Beungkum</option>
+						<option>&nbsp;&nbsp;&nbsp;Chomthong</option>
+						<option>&nbsp;&nbsp;&nbsp;Dindaeng</option>
+						<option>&nbsp;&nbsp;&nbsp;Donmuang</option>
+						<option>&nbsp;&nbsp;&nbsp;Dusit</option>
+						<option>&nbsp;&nbsp;&nbsp;Huaykwang</option>
+						<option>&nbsp;&nbsp;&nbsp;Jatuchak</option>
+						<option>&nbsp;&nbsp;&nbsp;Kannayao</option>
+						<option>&nbsp;&nbsp;&nbsp;Klongsamwa</option>
+						<option>&nbsp;&nbsp;&nbsp;Klongsan</option>
+						<option>&nbsp;&nbsp;&nbsp;Klongtoey</option>
+						<option>&nbsp;&nbsp;&nbsp;Ladkrabang</option>
+						<option>&nbsp;&nbsp;&nbsp;Ladprao</option>
+						<option>&nbsp;&nbsp;&nbsp;Laksri</option>
+						<option>&nbsp;&nbsp;&nbsp;Meenburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Nongjok</option>
+						<option>&nbsp;&nbsp;&nbsp;Nongkhaem</option>
+						<option>&nbsp;&nbsp;&nbsp;Pasicharoen</option>
+						<option>&nbsp;&nbsp;&nbsp;Pathumwan</option>
+						<option>&nbsp;&nbsp;&nbsp;Pomprab</option>
+						<option>&nbsp;&nbsp;&nbsp;Prakanong</option>
+						<option>&nbsp;&nbsp;&nbsp;Pranakorn</option>
+						<option>&nbsp;&nbsp;&nbsp;Pravet</option>
+						<option>&nbsp;&nbsp;&nbsp;Phayathai</option>
+						<option>&nbsp;&nbsp;&nbsp;Rajthevee</option>
+						<option>&nbsp;&nbsp;&nbsp;Ratburana</option>
+						<option>&nbsp;&nbsp;&nbsp;Saimai</option>
+						<option>&nbsp;&nbsp;&nbsp;Sampantawong</option>
+						<option>&nbsp;&nbsp;&nbsp;Sapan-suang</option>
+						<option>&nbsp;&nbsp;&nbsp;Sathorn</option>
+						<option>&nbsp;&nbsp;&nbsp;Suanluang</option>
+						<option>&nbsp;&nbsp;&nbsp;Talingchan</option>
+						<option>&nbsp;&nbsp;&nbsp;Thaweewattana</option>
+						<option>&nbsp;&nbsp;&nbsp;Thonburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Tung-kru</option>
+						<option>&nbsp;&nbsp;&nbsp;Wangthonglang</option>
+						<option>&nbsp;&nbsp;&nbsp;Wattana</option>
+						<option>&nbsp;&nbsp;&nbsp;Yannawa</option>
+						<option>Bangkok Area - Nakornpatom</option>
+						<option>Bangkok Area - Nonthaburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangbuathong</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangkruai</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangyai</option>
+						<option>&nbsp;&nbsp;&nbsp;Nonthaburi &gt; Muang</option>
+						<option>&nbsp;&nbsp;&nbsp;Prakket</option>
+						<option>Bangkok Area - Pathumthani</option>
+						<option>&nbsp;&nbsp;&nbsp;Klongluang</option>
+						<option>&nbsp;&nbsp;&nbsp;Ladlumkaew</option>
+						<option>&nbsp;&nbsp;&nbsp;lamlookka</option>
+						<option>&nbsp;&nbsp;&nbsp;Pathumthani &gt; Muang</option>
+						<option>&nbsp;&nbsp;&nbsp;Thanyaburi</option>
+						<option>Bangkok Area - Samutprakarn</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangbor</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangplee</option>
+						<option>&nbsp;&nbsp;&nbsp;Bangsaotong</option>
+						<option>&nbsp;&nbsp;&nbsp;Samutprakarn &gt; Muang</option>
+						<option>&nbsp;Phrapradaeng</option>
+						<option>Bangkok Area - Samutsakorn</option>
+						<option>Central</option>
+						<option>&nbsp;&nbsp;&nbsp;Ang Thong</option>
+						<option>&nbsp;&nbsp;&nbsp;Ayutthaya</option>
+						<option>&nbsp;&nbsp;&nbsp;Chai Nat</option>
+						<option>&nbsp;&nbsp;&nbsp;Kanchanaburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Lopburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Nakornnayok</option>
+						<option>&nbsp;&nbsp;&nbsp;Nakornsawan</option>
+						<option>&nbsp;&nbsp;&nbsp;Petchaburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Prachuap Khiri Khan</option>
+						<option>&nbsp;&nbsp;&nbsp;Rajchaburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Samutsongkhram</option>
+						<option>&nbsp;&nbsp;&nbsp;Saraburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Singburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Suphanburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Central &gt; Others</option>
+						<option>Eastern</option>
+						<option>&nbsp;&nbsp;&nbsp;Chachoengsao</option>
+						<option>&nbsp;&nbsp;&nbsp;Chonburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Phrachinburi</option>
+						<option>&nbsp;&nbsp;&nbsp;Rayong</option>
+						<option>&nbsp;&nbsp;&nbsp;Eastern &gt; Others</option>
+						<option>Northeastern</option>
+						<option>&nbsp;&nbsp;&nbsp;Khon Kaen</option>
+						<option>&nbsp;&nbsp;&nbsp;Nakhon Ratchasima</option>
+						<option>&nbsp;&nbsp;&nbsp;Ubon Ratchathani</option>
+						<option>&nbsp;&nbsp;&nbsp;Udon Thani</option>
+						<option>&nbsp;&nbsp;&nbsp;Yasothon</option>
+						<option>&nbsp;&nbsp;&nbsp;Northeastern &gt; Others</option>
+						<option>Northern</option>
+						<option>&nbsp;&nbsp;&nbsp;Chiang Mai</option>
+						<option>&nbsp;&nbsp;&nbsp;Chiang Rai</option>
+						<option6>&nbsp;&nbsp;&nbsp;Lampang</option>
+						<option>&nbsp;&nbsp;&nbsp;Lampoon</option>
+						<option>&nbsp;&nbsp;&nbsp;Mae Hong Son</option>
+						<option>&nbsp;&nbsp;&nbsp;Phitsanulok</option>
+						<option>&nbsp;&nbsp;&nbsp;Tak</option>
+						<option>&nbsp;&nbsp;&nbsp;Northern &gt; Others</option>
+						<option>Southern</option>
+						<option>&nbsp;&nbsp;&nbsp;Chumphon</option>
+						<option>&nbsp;&nbsp;&nbsp;Krabi</option>
+						<option>&nbsp;&nbsp;&nbsp;Nakhon Si Thammarat</option>
+						<option>&nbsp;&nbsp;&nbsp;Phuket</option>
+						<option>&nbsp;&nbsp;&nbsp;Songkhla</option>
+						<option>&nbsp;&nbsp;&nbsp;Surat Thani</option>
+						<option>&nbsp;&nbsp;&nbsp;Yala</option>
+						<option>&nbsp;&nbsp;&nbsp;Southern &gt; Others</option>
+						<option7>Others</option>
+						<option8>Overseas</option>
+						<optgroup></optgroup>
+					</select>
+					<br><br>
+					
+					<select name="edu">
+						<option value="">Education</option>
+						<option >Not Specificed</option>
+						<option value="N/A">Not applicable</option>
+						<option>High School Certificate</option>
+						<option>Diploma of High Vocational Education</option>
+						<option>Degree</option>
+						<option>Master</option>
+						<option>Dortorate</option>
+					  </select>
+					<br><br>
+
+					<div class="wrap-input2 validate-input" data-validate = "Experience is required">
+						<input class="input2" type="text" name="exp">
+						<span class="focus-input2" data-placeholder="Experience"></span>
+					</div>
+					
+					<select name="emp">
+						<option value="">Employment type</option>
+						<option>Full Time</option>
+						<option>Part Time</option>
+						<option>Permanent</option>
+						<option>Temporary</option>
+						<option>Contract</option>
+						<option>Internship</option>
+						<option>Freelance</option>
+					</select>
+
+					<select name="ind">
+						<option value="">Industry</option>
+						<option>Accounting / Audit / Tax Services</option>
+						<option>Advertising / Public Relations / Marketing Services</option>
+						<option>Architecture / Building / Construction</option>
+						<option>Athletics / Sports</option>
+						<option>Charity / Social Services / Non-Profit Organisation</option>
+						<option>Chemical / Plastic / Paper / Petrochemical</option>
+						<option>Civil Services ernment, Armed Forces</option>
+						<option>Clothing / Garment / Textile</option>
+						<option>Education</option>
+						<option>Electronics / Electrical Equipment</option>
+						<option>Energy / Power / Water / Oil &amp; Gas / Waste Management</option>
+						<option>Engineering - Building, Civil, Construction / Quantity Survey</option>
+						<option>Engineering - Electrical / Electronic / Mechanical</option>
+						<option>Engineering - Others</option>
+						<option>Entertainment / Recreation</option>
+						<option>Financial Services6</option>
+						<option>Food and Beverage / Catering</option>
+						<option>Freight Forwarding / Delivery / Shipping</option>
+						<option>General Business Services</option>
+						<option>Health &amp; Beauty Care</option>
+						<option>Hospitality / Catering</option>
+						<option>Human Resources Management / Consultancy</option>
+						<option>Industrial Machinery / Automation Equipment</option>
+						<option>Information Technology</option>
+						<option>Insurance / Pension Funding</option>
+						<option>Interior Design / Graphic Design</option>
+						<option>Jewellery / Gems / Watches</option>
+						<option>Laboratory</option>
+						<option>Legal Services</option>
+						<option>Management Consultancy / Service</option>
+						<option>Manufacturing</option>
+						<option>Mass Transportation</option>
+						<option>Media / Publishing / Printing</option>
+						<option>Medical / Pharmaceutical</option>
+						<option>Mixed Industry Group</option>
+						<option>Motor Vehicles</option>
+						<option>Packaging</option>
+						<option>Performance / Musical / Artistic</option>
+						<option>Petroleum</option>
+						<option>Property Development</option>
+						<option>Property Management / Consultancy</option>
+						<option>Public Utilities</option>
+						<option>Research / Survey</option>
+						<option>Security Escort</option>
+						<option>Security / Fire / Electronic Access Controls</option>
+						<option>Telecommunication</option>
+						<option>Tourism / Travel Agency</option>
+						<option>Toys</option>
+						<option>Trading and Distribution</option>
+						<option>Wholesale / Retail</option>
+						<option>Others</option>
+					</select>
+
+				<select name="jobfunc">
+						<option value="0">Job function</option>
+						<option>Accounting</option>
+						<option>&nbsp;&nbsp;&nbsp;General Accounting</option>
+						<option>&nbsp;&nbsp;&nbsp;Audit</option>
+						<option>&nbsp;&nbsp;&nbsp;Credit Control</option>
+						<option >&nbsp;&nbsp;&nbsp;Taxation</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Admin &amp; HR</option>
+						<option >&nbsp;&nbsp;&nbsp;Administration / Operation / Clerical Support</option>
+						<option>&nbsp;&nbsp;&nbsp;Compensation &amp; Benefits</option>
+						<option>&nbsp;&nbsp;&nbsp;Employee Relations</option>
+						<option>&nbsp;&nbsp;&nbsp;Recruitment / Executive Search</option>
+						<option >&nbsp;&nbsp;&nbsp;Secretary / Personal Assistant</option>
+						<option>&nbsp;&nbsp;&nbsp;Training &amp; Development</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Banking / Finance</option>
+						<option >&nbsp;&nbsp;&nbsp;Analysis</option>
+						<option>&nbsp;&nbsp;&nbsp;Bancassurance</option>
+						<option >&nbsp;&nbsp;&nbsp;Corporate Banking</option>
+						<option >&nbsp;&nbsp;&nbsp;Corporate Finance</option>
+						<option >&nbsp;&nbsp;&nbsp;Credit Analysis / Approval</option>
+						<option >&nbsp;&nbsp;&nbsp;Credit Management</option>
+						<option >&nbsp;&nbsp;&nbsp;Equities / Capital Markets</option>
+						<option >&nbsp;&nbsp;&nbsp;Financial Services</option>
+						<option >&nbsp;&nbsp;&nbsp;Fund Management</option>
+						<option >&nbsp;&nbsp;&nbsp;Investment</option>
+						<option >&nbsp;&nbsp;&nbsp;Loan</option>
+						<option >&nbsp;&nbsp;&nbsp;Mortgage</option>
+						<option >&nbsp;&nbsp;&nbsp;Private Banking</option>
+						<option >&nbsp;&nbsp;&nbsp;Retail Banking</option>
+						<option >&nbsp;&nbsp;&nbsp;Treasury</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Beauty Care / Health</option>
+						<option >&nbsp;&nbsp;&nbsp;Spa Therapist / Fitness / Sports &amp; Recreation</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Building &amp; Construction</option>
+						<option >&nbsp;&nbsp;&nbsp;Architectural Services</option>
+						<option >&nbsp;&nbsp;&nbsp;Building / Construction / QS</option>
+						<option >&nbsp;&nbsp;&nbsp;Civil / Structural</option>
+						<option >Design</option>
+						<option >&nbsp;&nbsp;&nbsp;Fashion</option>
+						<option >&nbsp;&nbsp;&nbsp;Graphics</option>
+						<option >&nbsp;&nbsp;&nbsp;Industrial / Product</option>
+						<option >&nbsp;&nbsp;&nbsp;Interior</option>
+						<option >&nbsp;&nbsp;&nbsp;Multimedia</option>
+						<option >&nbsp;&nbsp;&nbsp;Visual Merchandising</option>
+						<option >&nbsp;&nbsp;&nbsp;Web Design</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Education</option>
+						<option >&nbsp;&nbsp;&nbsp;Lecturer / Professor</option>
+						<option >&nbsp;&nbsp;&nbsp;Librarian</option>
+						<option >&nbsp;&nbsp;&nbsp;Teacher</option>
+						<option >&nbsp;&nbsp;&nbsp;Tutor / Instructor</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Engineering</option>
+						<option >&nbsp;&nbsp;&nbsp;Chemical</option>
+						<option >&nbsp;&nbsp;&nbsp;Electrical / Electronics</option>
+						<option >&nbsp;&nbsp;&nbsp;Energy / Natural Resources</option>
+						<option >&nbsp;&nbsp;&nbsp;Engineering Project Management</option>
+						<option >&nbsp;&nbsp;&nbsp;Health / Safety / Environmental</option>
+						<option >&nbsp;&nbsp;&nbsp;Industrial</option>
+						<option >&nbsp;&nbsp;&nbsp;Maintenance</option>
+						<option>&nbsp;&nbsp;&nbsp;Manufacturing &amp; Production</option>
+						<option>&nbsp;&nbsp;&nbsp;Mechanical</option>
+						<option>&nbsp;&nbsp;&nbsp;Telecommunication / Wireless / Radio</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Hospitality / F &amp; B</option>
+						<option>&nbsp;&nbsp;&nbsp;F &amp; B</option>
+						<option>&nbsp;&nbsp;&nbsp;Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Operation</option>
+						<option>&nbsp;&nbsp;&nbsp;Tourism / Travel Agency</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Information Technology </option>
+						<option>&nbsp;&nbsp;&nbsp;Application Specialist  Network</option>
+						<option>&nbsp;&nbsp;&nbsp;Application Specialist  Software</option>
+						<option>&nbsp;&nbsp;&nbsp;DBA</option>
+						<option>&nbsp;&nbsp;&nbsp;Hardware</option>
+						<option>&nbsp;&nbsp;&nbsp;Internet / SEO</option>
+						<option>&nbsp;&nbsp;&nbsp;IT Auditing</option>
+						<option>&nbsp;&nbsp;&nbsp;MIS8</option>
+						<option>&nbsp;&nbsp;&nbsp;IT Project Management / Team Lead</option>
+						<option>&nbsp;&nbsp;&nbsp;Mobile / Wireless Communications</option>
+						<option>&nbsp;&nbsp;&nbsp;Network &amp; System</option>
+						<option>&nbsp;&nbsp;&nbsp;Security</option>
+						<option>&nbsp;&nbsp;&nbsp;Programming / Software Development</option>
+						<option>&nbsp;&nbsp;&nbsp;Support</option>
+						<option>&nbsp;&nbsp;&nbsp;IT Consulting</option>
+						<option>&nbsp;&nbsp;&nbsp;Testing / QA</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Insurance</option>
+						<option>&nbsp;&nbsp;&nbsp;Actuarial</option>
+						<option>&nbsp;&nbsp;&nbsp;Claims Officer</option>
+						<option>&nbsp;&nbsp;&nbsp;Insurance Agent / Broker</option>
+						<option>&nbsp;&nbsp;&nbsp;Underwriter</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Management</option>
+						<option>&nbsp;&nbsp;&nbsp;General Management7</option>
+						<option>&nbsp;&nbsp;&nbsp;Top Executives O, CFO, CTO, GM, MD etc.</option>
+						<option>Manufacturing</option>
+						<option>&nbsp;&nbsp;&nbsp;Garment / Textile</option>
+						<option>&nbsp;&nbsp;&nbsp;General / Production</option>
+						<option>&nbsp;&nbsp;&nbsp;Gems &amp; Jewelry</option>
+						<option>&nbsp;&nbsp;&nbsp;Manufacturing Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Printing</option>
+						<option>&nbsp;&nbsp;&nbsp;Product Development / Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Production Planning / Control</option>
+						<option>&nbsp;&nbsp;&nbsp;Quality Assurance, Control &amp; Testing / ISO</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Marketing / Public Relations</option>
+						<option>&nbsp;&nbsp;&nbsp;Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Brand / Product Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Direct Marketing</option>
+						<option>&nbsp;&nbsp;&nbsp;Marketing General</option>
+						<option>&nbsp;&nbsp;&nbsp;Market Research</option>
+						<option>&nbsp;&nbsp;&nbsp;Marketing Communication</option>
+						<option>&nbsp;&nbsp;&nbsp;Copywriting</option>
+						<option>&nbsp;&nbsp;&nbsp;Event Marketing</option>
+						<option>&nbsp;&nbsp;&nbsp;PR General</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option >Media &amp; Advertising</option>
+						<option >&nbsp;&nbsp;&nbsp;Editorial / Journalism</option>
+						<option>&nbsp;&nbsp;&nbsp;Broadcasting  TV / Radio</option>
+						<option >&nbsp;&nbsp;&nbsp;Creative / Design5</option>
+						<option>&nbsp;&nbsp;&nbsp;Photography / Video</option>
+						<option>&nbsp;&nbsp;&nbsp;Print Media</option>
+						<option >&nbsp;&nbsp;&nbsp;Production</option>
+						<option >&nbsp;&nbsp;&nbsp;Strategic Planning7</option>
+						<option >&nbsp;&nbsp;&nbsp;Others1</option>
+						<option>Medical Services</option>
+						<option>&nbsp;&nbsp;&nbsp;Doctor / Practitioner / Surgeon</option>
+						<option>&nbsp;&nbsp;&nbsp;Medical Services Technician</option>
+						<option>&nbsp;&nbsp;&nbsp;Nursing</option>
+						<option>&nbsp;&nbsp;&nbsp;Pharmaceutical3</option>
+						<option>&nbsp;&nbsp;&nbsp;Specialist</option>
+						<option>&nbsp;&nbsp;&nbsp;Veterinarian</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Merchandising &amp; Purchasing</option>
+						<option>&nbsp;&nbsp;&nbsp;Garment</option>
+						<option>&nbsp;&nbsp;&nbsp;Household</option>
+						<option>&nbsp;&nbsp;&nbsp;Procurement / Purchasing / Sourcing</option>
+						<option>&nbsp;&nbsp;&nbsp;Industrial</option>
+						<option>&nbsp;&nbsp;&nbsp;Merchandising  Others</option>
+						<option>Professional Services</option>
+						<option >&nbsp;&nbsp;&nbsp;Business Analysis / Data Analysis</option>
+						<option >&nbsp;&nbsp;&nbsp;Business Consultancy</option>
+						<option>&nbsp;&nbsp;&nbsp;Legal &amp; Compliance</option>
+						<option>&nbsp;&nbsp;&nbsp;Translation</option>
+						<option>Property</option>
+						<option>&nbsp;&nbsp;&nbsp;Property Consultancy</option>
+						<option>&nbsp;&nbsp;&nbsp;Property Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Public / Civil</option>
+						<option >&nbsp;&nbsp;&nbsp;Civil Services</option>
+						<option>&nbsp;&nbsp;&nbsp;Military / defense</option>
+						<option>&nbsp;&nbsp;&nbsp;Social Services / Nonprofit Organization</option>
+						<option>&nbsp;&nbsp;&nbsp;Utilities</option>
+						<option>Sales, CS &amp; Business Devpt</option>
+						<option>&nbsp;&nbsp;&nbsp;Account Servicing</option>
+						<option >&nbsp;&nbsp;&nbsp;Business Development</option>
+						<option >&nbsp;&nbsp;&nbsp;Call Centre</option>
+						<option>&nbsp;&nbsp;&nbsp;Channel / Distribution</option>
+						<option >&nbsp;&nbsp;&nbsp;Customer Service</option>
+						<option>&nbsp;&nbsp;&nbsp;Direct</option>
+						<option>&nbsp;&nbsp;&nbsp;Retail Sales</option>
+						<option>&nbsp;&nbsp;&nbsp;Sales Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Technical Sales / Sales Engineer</option>
+						<option>&nbsp;&nbsp;&nbsp;Telesales lemarketing</option>
+						<option>&nbsp;&nbsp;&nbsp;Wholesale</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Sciences, Lab, R&amp;D</option>
+						<option >&nbsp;&nbsp;&nbsp;Biotechnology</option>
+						<option >&nbsp;&nbsp;&nbsp;Chemical</option>
+						<option >&nbsp;&nbsp;&nbsp;Energy / Natural Resources / Oil &amp; Gas</option>
+						<option>&nbsp;&nbsp;&nbsp;Environmental Science / Waste Management</option>
+						<option>&nbsp;&nbsp;&nbsp;Food Science</option>
+						<option>&nbsp;&nbsp;&nbsp;Laboratory</option>
+						<option>&nbsp;&nbsp;&nbsp;Life Science</option>
+						<option>&nbsp;&nbsp;&nbsp;Research &amp; Development (R&amp;D)</option>
+						<option>Telecomm</option>
+						<option>&nbsp;&nbsp;&nbsp;GSM Engineering</option>
+						<option>&nbsp;&nbsp;&nbsp;Network Administration</option>
+						<option>&nbsp;&nbsp;&nbsp;O &amp; M Engineering</option>
+						<option>&nbsp;&nbsp;&nbsp;RF  Planning / Installation / Administration</option>
+						<option>&nbsp;&nbsp;&nbsp;Switching Engineering</option>
+						<option>&nbsp;&nbsp;&nbsp;System Administration</option>
+						<option>&nbsp;&nbsp;&nbsp;System Engineering</option>
+						<option>&nbsp;&nbsp;&nbsp;Systems Security</option>
+						<option>&nbsp;&nbsp;&nbsp;Telecommunications Technical support</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Transportation &amp; Logistics</option>
+						<option >&nbsp;&nbsp;&nbsp;Airline</option>
+						<option >&nbsp;&nbsp;&nbsp;Automotive</option>
+						<option >&nbsp;&nbsp;&nbsp;Aviation Services</option>
+						<option>&nbsp;&nbsp;&nbsp;Export Import</option>
+						<option>&nbsp;&nbsp;&nbsp;Freight Forwarding</option>
+						<option>&nbsp;&nbsp;&nbsp;Inventory / Warehousing</option>
+						<option>&nbsp;&nbsp;&nbsp;Shipping1</option>
+						<option>&nbsp;&nbsp;&nbsp;Supply Chain</option>
+						<option >&nbsp;&nbsp;&nbsp;Others</option>
+						<option>Others</option>
+						<option >&nbsp;&nbsp;&nbsp;Agriculture / Forestry / Fishing</option>
+						<option>&nbsp;&nbsp;&nbsp;Artists / Singers / Musicians / Model</option>
+						<option>&nbsp;&nbsp;&nbsp;Geologist</option>
+						<option>&nbsp;&nbsp;&nbsp;Mining</option>
+						<option>&nbsp;&nbsp;&nbsp;Skill worker</option>
+						<option>&nbsp;&nbsp;&nbsp;Student / Fresh Graduate / No Experience</option>
+						<option>&nbsp;&nbsp;&nbsp;Technician</option>
+						<option>&nbsp;&nbsp;&nbsp;Trading</option>
+						<option>&nbsp;&nbsp;&nbsp;Others</option>
+						<optgroup></optgroup>
+				</select>
+				<br><br>				
+
+					<div class="container-contact2-form-btn">
+						<div class="wrap-contact2-form-btn">
+							<div class="contact2-form-bgbtn"></div>
+							<button class="contact2-form-btn">
+								Start Prediction
+							</button>							
+						</div>
+					</div>
+                </form>                
+			</div>
+		</div>		
+	</div>
+
+	
+
+	
+
+
+<!--===============================================================================================-->
+	<script src="prediction/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="prediction/vendor/bootstrap/js/popper.js"></script>
+	<script src="prediction/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="prediction/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="prediction/js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>
