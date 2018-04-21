@@ -23,9 +23,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req,res){
     //res.sendFile(path.join(__dirname)+'/index2.html');
-    res.render('prediction', {
-        message: ""
-    });                
+    res.render('prediction');                
+});
+
+app.get('/result', function(req,res){
+    //res.sendFile(path.join(__dirname)+'/index2.html');
+    res.render('result', {
+        message: req.query.salary
+    });              
 });
 
 app.post('/', function (req, res) {
@@ -36,11 +41,13 @@ app.post('/', function (req, res) {
     req.body.edu, req.body.exp, req.body.emp, req.body.ind, req.body.jobfunc]);
     writer.end();
     prediction((message) => {
-        res.render('prediction', {
-            message: parseInt(message)    
-        });
+        res.redirect(req.baseUrl + '/result?salary=' + parseInt(message));
     })
 });
+
+// app.post('/', function (req, res) {
+//     res.render('prediction');
+// });
 
 function prediction(callback) {
     var myPythonScriptPath = './prediction/predict.py';
