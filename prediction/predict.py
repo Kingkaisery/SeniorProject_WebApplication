@@ -57,14 +57,14 @@ def getTestData(data,start,end,vect,vect2):
 	tests = hstack((title,des))
 	return tests
 
-paths = json.load(open('/home/onani/Desktop/webapp/prediction/SETTINGS.json','rb'))
+paths = json.load(open('/home/onani/Desktop/SeniorProject_WebApplication/prediction/SETTINGS.json','rb'))
 #print 'Loading models'
-model = joblib.load('/home/onani/Desktop/webapp/prediction/model.p')
-vect = joblib.load('/home/onani/Desktop/webapp/prediction/vect1.p')
-vect2 = joblib.load('/home/onani/Desktop/webapp/prediction/vect2.p')
+model = joblib.load('/home/onani/Desktop/SeniorProject_WebApplication/prediction/model.p')
+vect = joblib.load('/home/onani/Desktop/SeniorProject_WebApplication/prediction/vect1.p')
+vect2 = joblib.load('/home/onani/Desktop/SeniorProject_WebApplication/prediction/vect2.p')
 
 #print 'loading testing data',paths['TEST_DATA_PATH']
-validData = LoadData('/home/onani/Desktop/webapp/prediction/test.csv')
+validData = LoadData('/home/onani/Desktop/SeniorProject_WebApplication/prediction/test.csv')
 titles = [validData[i].data['title'] for i in xrange(len(validData))]
 #validSalary = [validData[i].data['SalaryMid'] for i in xrange(len(validData))]
 validTests = getTestData(validData,0,len(validData),vect,vect2)
